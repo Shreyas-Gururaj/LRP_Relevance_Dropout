@@ -1,0 +1,29 @@
+cannonizer_map:
+  - [["sa1.conv_blocks.0.0"], "sa1.bn_blocks.0.0"]
+  - - ["sa1.conv_blocks.0.1", "sa1.bn_blocks.0.1"]
+  - - ["sa1.conv_blocks.0.2", "sa1.bn_blocks.0.2"]
+  - - ["sa1.conv_blocks.1.0", "sa1.bn_blocks.1.0"]
+  - - ["sa1.conv_blocks.1.1", "sa1.bn_blocks.1.1"]
+  - - ["sa1.conv_blocks.1.2", "sa1.bn_blocks.1.2"]
+  - - ["sa1.conv_blocks.2.0", "sa1.bn_blocks.2.0"]
+  - - ["sa1.conv_blocks.2.1", "sa1.bn_blocks.2.1"]
+  - - ["sa1.conv_blocks.2.2", "sa1.bn_blocks.2.2"]
+  - - ["sa2.conv_blocks.0.0", "sa2.bn_blocks.0.0"]
+  - - ["sa2.conv_blocks.0.1", "sa2.bn_blocks.0.1"]
+  - - ["sa2.conv_blocks.0.2", "sa2.bn_blocks.0.2"]
+  - - ["sa2.conv_blocks.1.0", "sa2.bn_blocks.1.0"]
+  - - ["sa2.conv_blocks.1.1", "sa2.bn_blocks.1.1"]
+  - - ["sa2.conv_blocks.1.2", "sa2.bn_blocks.1.2"]
+  - - ["sa2.conv_blocks.2.0", "sa2.bn_blocks.2.0"]
+  - - ["sa2.conv_blocks.2.1", "sa2.bn_blocks.2.1"]
+  - - ["sa2.conv_blocks.2.2", "sa2.bn_blocks.2.2"]
+  - - ["sa3.mlp_convs.0", "sa3.mlp_bns.0"]
+  - - ["sa3.mlp_convs.1", "sa3.mlp_bns.1"]
+  - - ["sa3.mlp_convs.2", "sa3.mlp_bns.2"]
+  - - ["fc1", "bn1"]
+  - - ["fc2", "bn2"]
+
+
+
+
+

@@ -1,0 +1,13 @@
+cannonizer_map:
+  - - ["sa1.mlp_convs.0", "sa1.mlp_bns.0"]
+  - - ["sa1.mlp_convs.1", "sa1.mlp_bns.1"]
+  - - ["sa1.mlp_convs.2", "sa1.mlp_bns.2"]
+  - - ["sa2.mlp_convs.0", "sa2.mlp_bns.0"]
+  - - ["sa2.mlp_convs.1", "sa2.mlp_bns.1"]
+  - - ["sa2.mlp_convs.2", "sa2.mlp_bns.2"]
+  - - ["sa3.mlp_convs.0", "sa3.mlp_bns.0"]
+  - - ["sa3.mlp_convs.1", "sa3.mlp_bns.1"]
+  - - ["sa3.mlp_convs.2", "sa3.mlp_bns.2"]
+  - - ["fc1", "bn1"]
+  - - ["fc2", "bn2"]
+

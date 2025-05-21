@@ -1,0 +1,40 @@
+{
+    "dataset": "cifar100",
+    "arch": "resnet50",
+    "pretrained": true,
+    "epochs": 100,
+    "train_batch": 128,
+    "test_batch": 100,
+    "lr": 0.1,
+    "optimizer_method": "SGD",
+    "lr_scheduler": "cosineannealinglr",
+    "lr_min": 1e-6,
+    "weight_decay": 1e-4,
+    "workers": 4,
+    "manualSeed": 69420,
+    "local_dir": "/home/fe/gururaj/LRP_Experiment/lrp_relevance_dropout-shreyas/Random_Erasing/cifar10/reldrop_checkpoint",
+    "results_dir": "/home/fe/gururaj/LRP_Experiment/lrp_relevance_dropout-shreyas/Random_Erasing/cifar10/reldrop_logs",
+    "imagenet_training_dataset_path": "/home/fe/gururaj/LRP_Experiment/Random-Erasing/imagenet/ImageNet_data/val",
+    "imagenet_validation_dataset_path": "/home/fe/gururaj/LRP_Experiment/Random-Erasing/imagenet/ImageNet_data/val",
+
+    "p_random_erasing": 0.5,
+    "sl_random_erasing": 0.02,
+    "sh_random_erasing": 0.4,
+    "r1_random_erasing": 0.3,
+
+    "composite_name": "epsilon_gamma_box",
+    "eps_comp": 0.001,
+
+    "relevance_dropout_pixel": false,
+    "prob_pixel": 0.3,
+    "alpha_pixel": 0.3,
+    "beta_pixel": 0.5,
+
+    "relevance_dropout_block": false,
+    "prob_block": 0.5,
+    "k_centers_block": 1,
+
+    "relevance_dropout_patch": false,
+    "prob_patch": 0.5,
+    "k_patches_patch": 5
+}

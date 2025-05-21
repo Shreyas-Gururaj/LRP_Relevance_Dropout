@@ -1,0 +1,45 @@
+training:
+  batch_size: 16
+  epochs: 100
+  learning_rate: 0.001
+  optimizer: Adam
+  weight_decay: 0.0001
+  log_dir: logs/pointnet_training
+
+model:
+  name: pointnet2_cls_msg  # Options: pointnet_cls, pointnet2_cls_ssg, pointnet2_cls_msg
+  num_class: 40
+  normal_channel: True
+
+dataset:
+  name: ModelNet40  # Options: ModelNet40, ModelNet10, ShapeNet
+  data_path: data/modelnet40_normal_resampled
+  num_points: 1024
+  use_normals: True
+  use_uniform_sample: True
+  process_data: False
+
+augmentation:
+  random_dropout:
+    enabled: False
+    max_ratio: 0.875
+  
+  relevance_dropout:
+    enabled: True
+    alpha: 0.5  # Balance between random and relevance-based dropout
+    beta: 0.5  # Maximum dropout ratio
+    value_replace: 0 # value for replacing the chosen indices
+    save_indices: True
+    
+  scaling:
+    enabled: True
+    scale_low: 0.8
+    scale_high: 1.25
+    
+  shifting:
+    enabled: True
+    shift_range: 0.1
+
+logging:
+  save_dir: logs/
+  checkpoint_interval: 10
