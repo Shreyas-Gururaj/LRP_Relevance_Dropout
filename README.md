@@ -31,7 +31,7 @@ pip install -r requirements.txt
 - CPU: Intel Xeon or equivalent
 - RAM: 32GB minimum recommended
 
-## Reproduce the experiments in the paper, i.e., 
+## Reproduce the experiments in the paper
 The current config files already have the hyperparameters set to the best values of the respective experiments
 
 ### 2D Images Finetuning (Table-1, Blue columns, Page-6)
