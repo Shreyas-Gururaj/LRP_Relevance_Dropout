@@ -2,7 +2,7 @@
 This repository implements Relevance-driven Input Dropout (RelDrop), a novel data augmentation technique that improves model generalization through selective occlusion of relevant input features. The implementation supports both 2D image classification and 3D point cloud classification tasks.
 
 ## Repository Structure
-\`\`\`
+```
 ./
 ├── 2D_Images/              # 2D image classification implementation
 ├── 3D_Pointclouds/         # 3D point cloud classification implementation
@@ -10,21 +10,21 @@ This repository implements Relevance-driven Input Dropout (RelDrop), a novel dat
 ├── data/                   # Recommended to save and load all the pre-trained models from this folder
 ├── requirements.txt        # Python dependencies
 └── README.md               # This file
-\`\`\`
+```
 
 ## Installation
 1. Create and activate a virtual environment:
-\`\`\`
+```
 python -m venv reldrop_env
 source reldrop_env/bin/activate  # Linux/Mac
 # or
 .\reldrop_env\Scripts\activate   # Windows
-\`\`\`
+```
 
 2. Install dependencies:
-\`\`\`
+```
 pip install -r requirements.txt
-\`\`\`
+```
 
 ## Hardware Requirements
 - GPU with minimum 16GB memory (tested on NVIDIA RTX 3090 and NVIDIA A100)
