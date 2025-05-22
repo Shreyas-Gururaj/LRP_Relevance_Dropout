@@ -1,5 +1,3 @@
-console.log(`# RelDrop: Relevance-driven Input Dropout
-
 ## Introduction
 This repository implements Relevance-driven Input Dropout (RelDrop), a novel data augmentation technique that improves model generalization through selective occlusion of relevant input features. The implementation supports both 2D image classification and 3D point cloud classification tasks.
 
@@ -47,6 +45,6 @@ pip install -r requirements.txt
 
 ## Pre-trained Models
 - [ResNet Models (MIT License)](https://huggingface.co/edadaltocg)
-- [ImageNet Pre-trained Models (Apache 2.0)](https://huggingface.co/docs/hub/en/timm)`);
+- [ImageNet Pre-trained Models (Apache 2.0)](https://huggingface.co/docs/hub/en/timm)
 
-giiti
+adadd
