@@ -18,9 +18,9 @@ sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
 def parse_args():
     parser = argparse.ArgumentParser('Training')
-    parser.add_argument('--config', type=str, default="/home/fe/gururaj/LRP_Experiment/lrp_relevance_dropout-shreyas/3DPC/config/train_config.yaml", help='Path to the training configuration file')
-    # parser.add_argument('--name_map', type=str, default="/home/fe/gururaj/LRP_Experiment/lrp_relevance_dropout-shreyas/3DPC/config/name_map.txt", help='Path to the NAME_MAP configuration file')
-    # parser.add_argument('--cannonizer_map', type=str, default="/home/fe/gururaj/LRP_Experiment/lrp_relevance_dropout-shreyas/3DPC/config/canonizer_map.txt", help='Path to the CANNONIZER_MAP configuration file')
+    parser.add_argument('--config', type=str, default="/path/to/config", help='Path to the training configuration file')
+    # parser.add_argument('--name_map', type=str, default="/path/to/name_map", help='Path to the NAME_MAP configuration file')
+    # parser.add_argument('--cannonizer_map', type=str, default="/path/to/canonizer_map", help='Path to the CANNONIZER_MAP configuration file')
     return parser.parse_args()
 
 def load_config(config_path):
@@ -159,7 +159,7 @@ def main():
                 num_class=config['model']['num_class'],
                 epoch=epoch,
                 part_list=file_name_list,
-                dir=config['logging']['save_dir'],
+                # dir=config['logging']['save_dir'],
                 # name_map_path=args.name_map,
                 # cannonizer_map_path=args.cannonizer_map,
                 replacement_value=config['augmentation']['relevance_dropout']['value_replace']
