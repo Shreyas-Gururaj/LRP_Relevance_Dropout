@@ -7,8 +7,8 @@
     "model_checkpoint_root": "/path/to/model_ImageNet_Checkpoint",  
     "models": {
         "arch": "resnet18",
-        "dropout_types": "Random_Erasing_Block",
+        "dropout_types": "Relevance_Erasing_Block",
         "prob": "0.5"
     },
-    "host_device": "fraunhofer_ws"
+    "host_device": "device_name/device_id"
 }

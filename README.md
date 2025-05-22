@@ -31,6 +31,33 @@ pip install -r requirements.txt
 - CPU: Intel Xeon or equivalent
 - RAM: 32GB minimum recommended
 
+## Reproduce the experiments in the paper, i.e., 
+The current config files already have the hyperparameters set to the best values of the respective experiments
+
+### 2D Images Finetuning (Table-1, Blue columns, Page-6)
+```
+cd ./2D_Images/run_scripts
+python cifar_imagenet.py --config_file training_config.json
+```
+
+### 2D Images Zero Shot (Table-1, Green columns, Page-8)
+#### ImageNet-A/O
+```
+cd ./2D_Images/zero_shot_eval
+python eval_imagenet_a_o.py --config_file eval_config.json 
+```
+#### ImageNet-R
+```
+cd ./2D_Images/zero_shot_eval
+python eval_imagenet_r.py --config_file eval_config.json
+```
+
+### 3D Pointclouds (Table-2, page-8)
+```
+cd ./3D_Pointclouds
+python train_classification.py --config_file ./config/training_config.yaml
+```
+
 ## Dataset Downloads
 ### 2D Image Datasets
 - [CIFAR-10/100](https://www.cs.toronto.edu/~kriz/cifar.html)

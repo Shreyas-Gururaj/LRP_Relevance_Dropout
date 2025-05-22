@@ -1,11 +1,11 @@
 {
-    "dataset": "cifar100",
+    "dataset": "cifar10",
     "arch": "resnet18",
     "pretrained": true,
     "epochs": 100,
-    "train_batch": 256,
+    "train_batch": 128,
     "test_batch": 100,
-    "lr": 0.1,
+    "lr": 0.1, 
     "optimizer_method": "SGD",
     "lr_scheduler": "cosineannealinglr",
     "lr_min": 1e-6,
@@ -17,7 +17,7 @@
     "imagenet_training_dataset_path": "path/to/ImageNet_data/train",
     "imagenet_validation_dataset_path": "path/to/ImageNet_data/val",
 
-    "p_random_erasing": 0.5,
+    "p_random_erasing": 0,
     "sl_random_erasing": 0.02,
     "sh_random_erasing": 0.4,
     "r1_random_erasing": 0.3,
@@ -30,7 +30,7 @@
     "alpha_pixel": 0.3,
     "beta_pixel": 0.5,
 
-    "relevance_dropout_block": false,
+    "relevance_dropout_block": true,
     "prob_block": 0.5,
     "k_centers_block": 1,
 

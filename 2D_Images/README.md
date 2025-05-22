@@ -1,3 +1,5 @@
+## Note:- These experiment scripts require the model checkpoints of the ImageNet-1k pretrained models to excecute (currently not included due to size restrictions).
+
 ## Directory Structure
 ```
 ./2D_Images/
