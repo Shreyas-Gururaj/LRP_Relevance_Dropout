@@ -63,8 +63,8 @@ def relavance_point_dropout(batch_pc, target, alpha, classifier, max_dropout_rat
     # print("CANNONNIZER_MAP:", CANNONIZER_MAP)
     
     # Load NAME_MAP and CANNONIZER_MAP from external text files
-    NAME_MAP = load_name_map(name_map_path)
-    CANNONIZER_MAP = load_cannonizer_map(cannonizer_map_path)
+    # NAME_MAP = load_name_map(name_map_path)
+    # CANNONIZER_MAP = load_cannonizer_map(cannonizer_map_path)
     
     NAME_MAP_MSG = [
     (['sa1.conv_blocks.0.0'], Flat()),  # Conv2d
@@ -169,16 +169,6 @@ def relavance_point_dropout(batch_pc, target, alpha, classifier, max_dropout_rat
                 batch_pc_np = batch_pc.detach().cpu().numpy()
                 batch_pc_np[b, :, drop_idx] = replacement_value  # Set dropped points to replacement value
                 batch_pc = torch.Tensor(batch_pc_np).cuda()
-                
-                # if part_list is not None and dir is not None:
-                #     import os
-                #     FINAL_PATH = os.path.join(dir, part_list[b])
-                #     if not os.path.exists(FINAL_PATH):
-                #         os.makedirs(FINAL_PATH)
-                    
-                    # DROP_IDX_NAME_EPOCH = part_list[b] + '_' + str(epoch)
-                    # DROP_IDX_FINAL_DIR = os.path.join(FINAL_PATH, DROP_IDX_NAME_EPOCH)
-                    # np.save(DROP_IDX_FINAL_DIR, drop_idx)
 
     batch_pc = batch_pc.transpose(1, 2)
     return batch_pc.cpu().detach().numpy()

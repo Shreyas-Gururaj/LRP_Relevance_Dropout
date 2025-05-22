@@ -21,9 +21,9 @@ import torch.optim as optim
 import torch.utils.data as data
 import torchvision.transforms as torchvision_transforms 
 from torchvision.transforms import ToTensor, Normalize
-# Ensure 'custom_transforms.py' (your original transforms.py) is in the same directory or adjust import
+# Ensure 'custom_transforms.py' (Random Erasing in Random Erasing Data Augmentation by Zhong et al) is in the same directory or adjust import
 import custom_transforms 
-import relevance_augmentations # Our new file
+import relevance_augmentations # Contains all the Relevance based augmentation strategies (pixel, block, patch)
 
 import torchvision.datasets as datasets
 # Ensure 'dataset_dir.py' is in the same directory or adjust import
@@ -34,7 +34,7 @@ import numpy as np
 import ssl
 from huggingface_hub import hf_hub_download
 
-# Ensure 'utils.py' is in the same directory or adjust import
+# Ensure './utils' is in the same directory or adjust import
 from utils import Bar, Logger, AverageMeter, accuracy, mkdir_p 
 from accelerate import Accelerator
 # import detectors
@@ -204,7 +204,7 @@ def load_pretrained_resnet_cifar(arch, dataset, pretrained):
 
     model_id = MODEL_MAP[arch][dataset]
     filename = "pytorch_model.bin"
-    cache_dir = f"./models/{arch}_{dataset}"
+    cache_dir = f"../../models/{arch}_{dataset}"
 
     # Check if model exists locally
     model_path = os.path.join(cache_dir, filename)
@@ -319,11 +319,11 @@ def main():
         trainset = ImageFolderWithPaths(root=args.imagenet_training_dataset_path, transform=transform_train_loader)
         testset = ImageFolderWithPaths(root=args.imagenet_validation_dataset_path, transform=transform_test_loader)
     elif args.dataset == 'cifar10':
-        trainset = datasets.CIFAR10(root='./data', train=True, download=True, transform=transform_train_loader)
-        testset = datasets.CIFAR10(root='./data', train=False, download=True, transform=transform_test_loader)
+        trainset = datasets.CIFAR10(root='../../data', train=True, download=True, transform=transform_train_loader)
+        testset = datasets.CIFAR10(root='../../data', train=False, download=True, transform=transform_test_loader)
     else: 
-        trainset = datasets.CIFAR100(root='./data', train=True, download=True, transform=transform_train_loader)
-        testset = datasets.CIFAR100(root='./data', train=False, download=True, transform=transform_test_loader)
+        trainset = datasets.CIFAR100(root='../../data', train=True, download=True, transform=transform_train_loader)
+        testset = datasets.CIFAR100(root='../../data', train=False, download=True, transform=transform_test_loader)
 
     trainloader = data.DataLoader(trainset, batch_size=args.train_batch, shuffle=True, num_workers=args.workers, pin_memory=True, drop_last=True if args.dataset=='imagenet' else False)
     testloader = data.DataLoader(testset, batch_size=args.test_batch, shuffle=False, num_workers=args.workers, pin_memory=True)
@@ -360,7 +360,6 @@ def main():
                     model = load_pretrained_resnet_cifar(args.arch, args.dataset, args.pretrained)
                     print(f"VERIFY: Successfully loaded and configured Hub model {hub_model_name} with CIFAR stem.")
                     print(f"VERIFY: Re-initializing FC layer for {hub_model_name} for {num_classes} classes as per original script.")
-                    print(model)
                 except Exception as e_hub:
                     print(f"ERROR: Failed to load Hub model {hub_model_name}. Error: {e_hub}")
                     # Fallback 1: Try timm's internal name like "resnet18_cifar10" (might not exist)

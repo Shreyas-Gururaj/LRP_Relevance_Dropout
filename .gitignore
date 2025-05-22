@@ -37,26 +37,8 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Ignore folders
-pointnet++/Pointnet_Pointnet2_pytorch/data
-pointnet++/Pointnet_Pointnet2_pytorch/log
-pointnet++/Pointnet_Pointnet2_pytorch/wandb
-pointnet++/Pointnet_Pointnet2_pytorch/ignore_shell_def
-pointnet++/Pointnet_Pointnet2_pytorch/Quantus
-Quantus_New/
-Random_Erasing/checkpoint
-Random_Erasing/cifar10
-Random_Erasing/cifar100
-Random_Erasing/imagenet
-Random_Erasing/ImageNet_adv/imagenet_a
-Random_Erasing/ImageNet_adv/imagenet_o
-Random_Erasing/ImageNet_r/imagenet_r
-Random_Erasing/run_scripts/data
-Random_Erasing/run_scripts/NEW_REPORT
-Random_Erasing/run_scripts/NEW_REPORT_QUAL_ICCV
-Random_Erasing/run_scripts/NEW_REPORT_QUAL
-Random_Erasing/run_scripts/qualitative_*
-Random_Erasing/objectnet_pytorch/model
-Random_Erasing/objectnet_pytorch/output
+./data
+./models
 
 # Unit test / coverage reports
 htmlcov/

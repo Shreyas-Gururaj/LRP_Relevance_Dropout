@@ -1,10 +1,10 @@
 {
-    "imagenet_validation_path": "/home/fe/gururaj/LRP_Experiment/Random-Erasing/imagenet/ImageNet_data/val",
-    "imagenet_a_path": "/home/fe/gururaj/LRP_Experiment/lrp_relevance_dropout-shreyas/Random_Erasing/data/imagenet_a",
-    "imagenet_o_path": "/home/fe/gururaj/LRP_Experiment/lrp_relevance_dropout-shreyas/Random_Erasing/data/imagenet_o",
-    "imagenet_r_path": "/home/fe/gururaj/LRP_Experiment/lrp_relevance_dropout-shreyas/Random_Erasing/data/imagenet_r",
-    "imagenet_200_path_temp": "/home/fe/gururaj/LRP_Experiment/lrp_relevance_dropout-shreyas/Random_Erasing/data/imagenet_r/tmp/imagenet_val_for_imagenet_r",
-    "model_checkpoint_root": "/home/fe/gururaj/LRP_Experiment/lrp_relevance_dropout-shreyas/Random_Erasing/models/NEW_REPORT_e50_lr_0.01_NeurIPS_Final",
+    "imagenet_validation_path": "/path/to/ImageNet-1k/val",
+    "imagenet_a_path": "/path/to/ImageNet_a",
+    "imagenet_o_path": "/path/to/ImageNet_o",
+    "imagenet_r_path": "/path/to/ImageNet_r",
+    "imagenet_200_path_temp": "/path/to/tmp/ImageNet_200",
+    "model_checkpoint_root": "/path/to/model_ImageNet_Checkpoint",  
     "models": {
         "arch": "resnet18",
         "dropout_types": "Random_Erasing_Block",

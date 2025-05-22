@@ -1,9 +1,9 @@
 {
     "dataset": "cifar100",
-    "arch": "resnet50",
+    "arch": "resnet18",
     "pretrained": true,
     "epochs": 100,
-    "train_batch": 128,
+    "train_batch": 256,
     "test_batch": 100,
     "lr": 0.1,
     "optimizer_method": "SGD",
@@ -22,7 +22,7 @@
     "sh_random_erasing": 0.4,
     "r1_random_erasing": 0.3,
 
-    "composite_name": "epsilon_gamma_box",
+    "composite_name": "epsilon_zplus",
     "eps_comp": 0.001,
 
     "relevance_dropout_pixel": false,
