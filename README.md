@@ -46,5 +46,3 @@ pip install -r requirements.txt
 ## Pre-trained Models
 - [ResNet Models (MIT License)](https://huggingface.co/edadaltocg)
 - [ImageNet Pre-trained Models (Apache 2.0)](https://huggingface.co/docs/hub/en/timm)
-
-adadd
