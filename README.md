@@ -1,3 +1,17 @@
+## This repo has the source code for the paper ["Relevance-driven Input Dropout: an Explanation-guided Regularization Technique"](https://arxiv.org/abs/2505.21595).
+If you find this code useful in your research, please consider citing:
+```
+@misc{gururaj2025relevancedriveninputdropoutexplanationguided,
+      title={Relevance-driven Input Dropout: an Explanation-guided Regularization Technique}, 
+      author={Shreyas Gururaj and Lars Grüne and Wojciech Samek and Sebastian Lapuschkin and Leander Weber},
+      year={2025},
+      eprint={2505.21595},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2505.21595}, 
+}
+```
+
 ## Introduction
 This repository implements Relevance-driven Input Dropout (RelDrop), a novel data augmentation technique that improves model generalization through selective occlusion of relevant input features. The implementation supports both 2D image classification and 3D point cloud classification tasks.
 
